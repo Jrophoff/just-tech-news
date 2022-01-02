@@ -34,12 +34,12 @@ async function signupFormHandler(event) {
       body: JSON.stringify({
         username,
         email,
-        password,
+        password
       }),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-      console.log('success');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
